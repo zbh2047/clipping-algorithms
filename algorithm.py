@@ -2,7 +2,7 @@ from torch.optim import Optimizer
 import torch
 import math
 
-# Note: for all algorithms wich momentum prarameter, dampening is 1-momentum
+# Note: for all algorithms with momentum prarameter, dampening is 1-momentum
 
 class AlgorithmBase():
     @staticmethod

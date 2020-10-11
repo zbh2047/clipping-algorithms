@@ -2,6 +2,10 @@
 
 A Pytorch(1.4.0) implementation for training neural networks with clipping algorithms on various datasets.  See the paper:  [ Improved Analysis of Clipping Algorithms for Non-convex Optimization ]( https://arxiv.org/abs/2010.02519 ).
 
+The results are shown in the following figure.
+
+- ![avatar](result.png)
+
 ## Dependencies
 
 - Pytorch 1.4.0
