@@ -11,8 +11,8 @@ class AlgorithmBase():
 
 class Algorithm(Optimizer):
     """
-        Note that kwargs includes all the parametets, such as lr, momentum, etc.
-        param are grouped and gradient normalization is applied group-wise.
+        Note that kwargs should include all the parameters, such as lr, momentum, etc.
+        Parameters are grouped and gradient normalization is applied group-wise.
     """
     def __init__(self, params, algo, **kwargs):
         super(Algorithm, self).__init__(params, kwargs)
@@ -96,8 +96,7 @@ class Adagrad(AlgorithmBase):
 
 
 class MixClip(AlgorithmBase):
-    # g = momentum * g + (1 - momentum) * grad
-    # x = x - min(lr, gamma / |g|) * g
+    # see the paper
     @staticmethod
     def update(paras, state, group_state, lr, gamma, momentum=0.999, nu=0.7, **kwargs):
         d_ps = []
@@ -113,8 +112,6 @@ class MixClip(AlgorithmBase):
             p.data.add_(-lr * (1 - nu) / (1 + sum2 / gamma * lr), p.grad.data)
 
 class MomClip(AlgorithmBase):
-    # g = momentum * g + (1 - momentum) * grad
-    # x = x - min(lr, gamma / |g|) * g
     @staticmethod
     def update(paras, state, group_state, lr, gamma, momentum=0.9, **kwargs):
         MixClip.update(paras, state, group_state, lr, gamma, momentum=momentum, nu=1, **kwargs)
