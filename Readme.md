@@ -65,11 +65,16 @@ python main_lstm.py --batch_size 20 --data [data_folder] --dropouti 0.4 --dropou
 If you use this code or our results in your research, please cite as appropriate: 
 
 ```
-@article{zhang2020improved,
-  title={Improved Analysis of Clipping Algorithms for Non-convex Optimization}, 
-  author={Bohang Zhang and Jikai Jin and Cong Fang and Liwei Wang},
-  journal={arXiv preprint arXiv:2010.02519},
-  year={2020}
+@inproceedings{NEURIPS2020_b282d173,
+ author = {Zhang, Bohang and Jin, Jikai and Fang, Cong and Wang, Liwei},
+ booktitle = {Advances in Neural Information Processing Systems},
+ editor = {H. Larochelle and M. Ranzato and R. Hadsell and M. F. Balcan and H. Lin},
+ pages = {15511--15521},
+ publisher = {Curran Associates, Inc.},
+ title = {Improved Analysis of Clipping Algorithms for Non-convex Optimization},
+ url = {https://proceedings.neurips.cc/paper/2020/file/b282d1735283e8eea45bce393cefe265-Paper.pdf},
+ volume = {33},
+ year = {2020}
 }
 ```
 
